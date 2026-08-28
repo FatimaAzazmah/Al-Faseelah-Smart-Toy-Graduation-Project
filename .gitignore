@@ -1,0 +1,28 @@
+# Secrets — never commit real keys
+.env
+*.key
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Audio artifacts & speech models (large / generated)
+*.mp3
+*.wav
+vosk-model-*/
+*.zip
+whisper_models/
+
+# Backups & scratch
+*.bak
+*.bak*
+*.save
+
+# Generated image cache (built on first run of character_display.py)
+images_cache/
+
+# System
+.DS_Store
+*.log

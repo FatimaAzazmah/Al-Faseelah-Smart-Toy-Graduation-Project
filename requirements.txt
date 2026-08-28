@@ -1,0 +1,28 @@
+# Al-Faseelah AI Dialogue System — Raspberry Pi 5 (64-bit Raspberry Pi OS)
+
+# ── Core AI pipeline ──────────────────────────────────────────
+openai-whisper==20250625   # local speech-to-text (pulls in torch)
+google-genai               # Gemini language model client
+gTTS==2.5.4                # fallback text-to-speech
+requests                   # ElevenLabs REST API calls
+
+# ── Data & config ─────────────────────────────────────────────
+supabase==2.30.0           # content, child profiles, session reports
+python-dotenv              # .env loading
+
+# ── Audio & display ───────────────────────────────────────────
+pygame==2.6.1              # audio playback + character display
+sounddevice                # microphone capture (PortAudio)
+numpy
+scipy
+Pillow                     # character image alignment
+
+# ── Raspberry Pi hardware ─────────────────────────────────────
+gpiozero                   # reed-switch piece sensors
+pyserial                   # RDM6300 RFID reader (UART)
+bless==0.3.0               # BLE GATT server (requires BlueZ/D-Bus on Linux)
+
+# ── Used by test scripts only ─────────────────────────────────
+vosk==0.3.45               # tests/test_vosk.py — early STT experiments
+PyAudio==0.2.14            # tests/test_vosk.py
+soundfile==0.13.1          # tests/test_whisper.py
